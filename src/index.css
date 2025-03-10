@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-black text-gray-100 font-cyber-secondary;
+    background: linear-gradient(to bottom, #0a0a0a, #121212);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cyber text-white;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-white animate-glow;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold animate-text-shimmer;
+    background: linear-gradient(to right, #00fff9, #ff00ff, #00fff9);
+    background-size: 200% auto;
+  }
+
+  p {
+    @apply text-gray-100 leading-relaxed;
+  }
+
+  a {
+    @apply text-neon-blue hover:text-neon-purple transition-colors duration-300
+           hover:animate-pulse-neon;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .cyber-button {
+    @apply px-6 py-2 font-cyber text-white border-2 border-neon-blue
+           hover:bg-neon-blue/20 transition-all duration-300
+           hover:shadow-neon-blue rounded-none relative
+           overflow-hidden animate-pulse-neon;
+  }
+
+  .cyber-card {
+    @apply bg-cyber-darker/90 border-2 border-neon-purple/70
+           hover:border-neon-purple transition-all duration-300
+           p-6 relative overflow-hidden hover:animate-border-flow;
+    border-style: solid;
+    border-width: 2px;
+  }
+
+  .cyber-input {
+    @apply bg-cyber-darker border-2 border-neon-blue/70
+           focus:border-neon-blue focus:shadow-neon-blue
+           outline-none px-4 py-2 font-cyber-secondary
+           text-white placeholder-gray-400
+           focus:animate-pulse-neon;
+  }
+
+  .neon-text {
+    @apply animate-glow font-semibold;
+  }
+
+  .cyber-grid {
+    background-image: linear-gradient(rgba(0, 255, 249, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 255, 249, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    @apply absolute inset-0 opacity-20;
+    animation: grid-fade 2s ease-in-out infinite alternate;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink
+           animate-text-shimmer;
+    background-size: 200% auto;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:animate-cyber-hover;
+  }
+
+  .neon-border {
+    @apply border-2 animate-border-flow;
+    border-style: solid;
+  }
+}
+
+@keyframes grid-fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cyber-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-purple/70 hover:bg-neon-purple transition-colors duration-300;
 }
