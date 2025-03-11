@@ -6,6 +6,7 @@ import cnaIntro from '../assets/cybersecurity/cna-intro.png';
 import cnaCyberthreat from '../assets/cybersecurity/cna-cyberthreat.png';
 import slIntro from '../assets/cybersecurity/sl-intro.png';
 
+// Cybersecurity component
 const Cybersecurity = () => {
   return (
     <div className="min-h-screen w-full px-4 pt-4 pb-20 md:pt-8 md:pb-24 flex flex-col items-center justify-center">
@@ -14,6 +15,7 @@ const Cybersecurity = () => {
           Absolute Security, Proactively Engineered
         </h1>
         
+        {/* Focus Areas Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Focus Areas</h2>
           <div className="bg-gray-800/30 p-8 rounded-lg border border-gray-700 max-w-4xl mx-auto">
@@ -23,6 +25,7 @@ const Cybersecurity = () => {
           </div>
         </section>
         
+        {/* Digital Badges Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Digital Badges</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

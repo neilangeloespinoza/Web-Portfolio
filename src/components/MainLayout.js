@@ -10,6 +10,7 @@ import Contact from './Contact';
 const MainLayout = () => {
   const [activeSection, setActiveSection] = useState('intro');
 
+  // Function to scroll to a specific section
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {

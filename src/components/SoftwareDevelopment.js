@@ -25,14 +25,17 @@ import idemeterPhone from '../assets/projects/idemeter-phone.png';
 import idemeterSchematic from '../assets/projects/idemeter-schematic.png';
 import idemeterSample from '../assets/projects/idemeter-sample.png';
 
+// SoftwareDevelopment component
 const SoftwareDevelopment = () => {
   return (
     <div className="min-h-screen w-full px-4 pt-4 pb-20 md:pt-8 md:pb-24 flex flex-col items-center justify-center">
       <div className="text-center w-full max-w-[1400px] mx-auto">
+        {/* Title */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-16 text-white text-center">
           Engineered Code for Real-World Impact
         </h1>
         
+        {/* Tech Stack Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Tech Stack</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -148,6 +151,7 @@ const SoftwareDevelopment = () => {
           </div>
         </section>
         
+        {/* Featured Project Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Featured Project</h2>
           <div className="bg-gray-800/30 p-8 rounded-lg border border-gray-700 max-w-4xl mx-auto">

@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../assets/NAE Logo.png';
 
 const Sidebar = ({ activeSection, scrollToSection }) => {
+  // Define menu items with their respective section IDs and labels
   const menuItems = [
     { id: 'about', label: 'About' },
     { id: 'software', label: 'Software Development' },
@@ -12,6 +13,7 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
 
   return (
     <div className="h-full flex flex-col bg-cyber-darker">
+      {/* Logo and tagline */}
       <div className="p-6 flex flex-col items-center border-b-2 border-neon-blue/50">
         <button 
           onClick={() => scrollToSection('intro')} 
@@ -36,6 +38,7 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
           </span>
         </p>
       </div>
+      {/* Navigation menu */}
       <nav className="flex-1 flex flex-col justify-evenly px-4 py-8">
         {menuItems.map((item) => (
           <button
@@ -54,6 +57,7 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
           </button>
         ))}
       </nav>
+      {/* Footer */}
       <div className="p-4 text-sm text-center font-cyber-secondary text-white border-t-2 border-neon-purple/50">
         © 2025 Neil Angelo Espinoza
       </div>

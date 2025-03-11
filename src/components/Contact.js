@@ -3,6 +3,7 @@ import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
 import resume from '../assets/Résumé_NAE.pdf';
 import emailjs from '@emailjs/browser';
 
+// Contact component
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
+  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -21,16 +23,17 @@ const Contact = () => {
     }));
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     emailjs.sendForm(
-      'service_adt1etj', // Replace with your EmailJS service ID
-      'template_ms16poh', // Replace with your EmailJS template ID
+      'service_adt1etj', // EmailJS service ID
+      'template_ms16poh', //  EmailJS template ID
       form.current,
-      'TCizKR7DRJjkHPS-P' // Replace with your EmailJS public key
+      'TCizKR7DRJjkHPS-P' //  EmailJS public key
     )
       .then((result) => {
         setSubmitStatus('success');
@@ -52,6 +55,7 @@ const Contact = () => {
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          {/* Contact Form */}
           <section className="bg-gray-800/30 p-8 rounded-lg border border-gray-700 flex flex-col">
             <h2 className="text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Send a Message</h2>
             <form ref={form} onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
@@ -122,6 +126,7 @@ const Contact = () => {
             </form>
           </section>
           
+          {/* Direct Links */}
           <section className="bg-gray-800/30 p-8 rounded-lg border border-gray-700 flex flex-col">
             <h2 className="text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Direct Links</h2>
             <ul className="space-y-8 flex-grow">

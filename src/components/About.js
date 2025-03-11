@@ -1,11 +1,13 @@
 import React from 'react';
 import NeilImage from '../assets/Neil.png';
 
+// About component
 const About = () => {
   return (
     <div className="min-h-screen w-full px-4 pt-4 pb-20 md:pt-8 md:pb-24 flex flex-col items-center justify-center">
       <div className="text-center w-full max-w-[1400px] mx-auto">
         <div className="flex flex-col items-center mb-16">
+          {/* Name and Image */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-white text-center">
             Neil Angelo Espinoza
           </h1>
@@ -21,6 +23,7 @@ const About = () => {
           </p>
         </div>
         
+        {/* Education Section */}
         <section className="mb-16 w-full">
           <h2 className="text-xl sm:text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Education</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-stretch auto-rows-fr px-4">
@@ -67,6 +70,7 @@ const About = () => {
           </div>
         </section>
         
+        {/* Experiences Section */}
         <section className="w-full">
           <h2 className="text-xl sm:text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Experiences</h2>
           <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto px-4">
