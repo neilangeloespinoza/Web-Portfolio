@@ -104,7 +104,7 @@ const About = () => {
                 className="w-64 h-64 sm:w-80 sm:h-80 rounded-lg object-cover mb-8 shadow-xl"
               />
               <p className="text-white text-base sm:text-lg text-center max-w-3xl leading-relaxed px-4">
-                Always competing since elementary, runner up on provincial meet, and former PUP table tennis varsity team.
+              Always competing since elementary school, runner-up in provincial meets, and former member of the PUP table tennis varsity team.
               </p>
             </div>
             {/* Anime */}
@@ -114,22 +114,22 @@ const About = () => {
                 <img 
                   src={NarutoImage}
                   alt="Naruto"
-                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-contain shadow-xl"
                 />
                 <img 
                   src={OnePieceImage}
                   alt="One Piece"
-                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-contain shadow-xl"
                 />
                 <img 
                   src={HxHImage}
                   alt="Hunter x Hunter"
-                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-contain shadow-xl"
                 />
                 <img 
                   src={CodeGeassImage}
                   alt="Code Geass"
-                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-contain shadow-xl"
                 />
               </div>
               <p className="text-white text-base sm:text-lg text-center max-w-3xl leading-relaxed px-4">

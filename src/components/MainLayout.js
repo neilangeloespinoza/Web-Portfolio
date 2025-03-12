@@ -12,6 +12,7 @@ const MainLayout = () => {
   const sectionRefs = useRef({});
 
   useEffect(() => {
+    // Create an IntersectionObserver to observe section visibility
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -25,12 +26,14 @@ const MainLayout = () => {
 
     const currentSectionRefs = sectionRefs.current;
 
+    // Observe each section
     Object.values(currentSectionRefs).forEach((section) => {
       if (section) {
         observer.observe(section);
       }
     });
 
+    // Cleanup observer on component unmount
     return () => {
       Object.values(currentSectionRefs).forEach((section) => {
         if (section) {
