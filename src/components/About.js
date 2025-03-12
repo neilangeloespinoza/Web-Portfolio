@@ -1,5 +1,10 @@
 import React from 'react';
 import NeilImage from '../assets/Neil.png';
+import NeilTTImage from '../assets/Neil_tt.jpg';
+import NarutoImage from '../assets/about/naruto.jpg';
+import OnePieceImage from '../assets/about/onepiece.jpg';
+import HxHImage from '../assets/about/hxh.jpg';
+import CodeGeassImage from '../assets/about/codegeass.jpg';
 
 // About component
 const About = () => {
@@ -82,6 +87,54 @@ const About = () => {
               <ul className="list-disc list-inside text-gray-300 text-base space-y-1">
                 <li className="text-center list-none line-clamp-3">Participating in their Internship Program for Web Development, Mobile Development, and UI/UX Design.</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Hobbies Section */}
+        <section className="w-full mt-16">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-8 text-white border-b border-gray-700 pb-2 text-center">Hobbies</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto px-4">
+            {/* Table Tennis */}
+            <div className="flex flex-col items-center bg-gray-800/50 p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 text-center">Table Tennis</h3>
+              <img 
+                src={NeilTTImage}
+                alt="Neil Angelo Espinoza playing table tennis" 
+                className="w-64 h-64 sm:w-80 sm:h-80 rounded-lg object-cover mb-8 shadow-xl"
+              />
+              <p className="text-white text-base sm:text-lg text-center max-w-3xl leading-relaxed px-4">
+                Always competing since elementary, runner up on provincial meet, and former PUP table tennis varsity team.
+              </p>
+            </div>
+            {/* Anime */}
+            <div className="flex flex-col items-center bg-gray-800/50 p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 text-center">Anime</h3>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <img 
+                  src={NarutoImage}
+                  alt="Naruto"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                />
+                <img 
+                  src={OnePieceImage}
+                  alt="One Piece"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                />
+                <img 
+                  src={HxHImage}
+                  alt="Hunter x Hunter"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                />
+                <img 
+                  src={CodeGeassImage}
+                  alt="Code Geass"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover shadow-xl"
+                />
+              </div>
+              <p className="text-white text-base sm:text-lg text-center max-w-3xl leading-relaxed px-4">
+                His favorite animes are One Piece, Naruto, Hunter x Hunter, and Code Geass.
+              </p>
             </div>
           </div>
         </section>

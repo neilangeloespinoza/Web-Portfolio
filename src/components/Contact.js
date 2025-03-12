@@ -119,7 +119,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-4 bg-white text-gray-900 rounded hover:bg-gray-100 transition-colors text-lg font-medium mt-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full inline-block px-6 py-4 bg-white text-gray-900 rounded hover:bg-gray-100 transition-colors text-lg font-medium mt-auto disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -161,7 +161,7 @@ const Contact = () => {
                 href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-block px-6 py-4 bg-white text-gray-900 rounded hover:bg-gray-100 transition-colors text-lg font-medium text-center"
+                className="w-full inline-block px-6 py-4 bg-transparent text-white border border-white rounded transition-colors text-lg font-medium mt-auto disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Grab a copy of my résumé
               </a>

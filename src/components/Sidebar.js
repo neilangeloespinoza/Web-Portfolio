@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/NAE Logo.png';
 
 const Sidebar = ({ activeSection, scrollToSection }) => {
-  // Define menu items with their respective section IDs and labels
+  // Menu items with their respective section IDs and labels
   const menuItems = [
     { id: 'about', label: 'About' },
     { id: 'software', label: 'Software Development' },
@@ -17,13 +17,12 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
       <div className="p-6 flex flex-col items-center border-b-2 border-neon-blue/50">
         <button 
           onClick={() => scrollToSection('intro')} 
-          className="focus:outline-none relative group"
+          className="focus:outline-none relative"
         >
-          <div className="absolute inset-0 bg-white/20 blur-md group-hover:bg-white/30 transition-all duration-300"></div>
           <img 
             src={logo} 
             alt="NAE Logo" 
-            className="w-18 h-18 mb-4 relative z-10 hover:opacity-80 transition-opacity" 
+            className="w-18 h-18 mb-4 relative z-10 hover:opacity-80 transition-opacity filter invert" 
           />
         </button>
         <p className="text-sm text-center font-cyber-secondary text-white">
