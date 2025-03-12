@@ -30,10 +30,10 @@ const Contact = () => {
     setSubmitStatus(null);
 
     emailjs.sendForm(
-      'service_adt1etj', // EmailJS service ID
-      'template_ms16poh', //  EmailJS template ID
+      process.env.NAE_PORTFOLIO_EMAILJS_SERVICE_ID, // EmailJS service ID
+      process.env.NAE_PORTFOLIO_EMAILJS_TEMPLATE_ID, // EmailJS template ID
       form.current,
-      'TCizKR7DRJjkHPS-P' //  EmailJS public key
+      process.env.NAE_PORTFOLIO_EMAILJS_PUBLIC_KEY // EmailJS public key
     )
       .then((result) => {
         setSubmitStatus('success');
